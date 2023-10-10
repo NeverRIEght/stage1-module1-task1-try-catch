@@ -22,10 +22,12 @@ public class ParseIntegers {
         while (words.hasNext()) {
             String next = words.next();
             int number;
+
+
             try {
                 number = Integer.parseInt(next);
                 sum += number;
-            } catch (Exception ex) {
+            } catch (NumberFormatException ex) {
                 justWords += next + " ";
             }
         }
